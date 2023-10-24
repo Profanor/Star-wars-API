@@ -72,7 +72,7 @@ body {
 .character-details img {
   border-radius: 8px;
   cursor: pointer;
-  max-width: 100px;
+  max-width: 100%;
   max-height: 150px;
   display: block;
   margin: 0 auto;
@@ -151,12 +151,6 @@ li a:hover {
 }
 /*media query for mobile devices */
 @media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-}
-/*media query for mobile devices */
-@media screen and (max-width: 768px) {
   body {
     background-size: cover;
     background-position: center;
@@ -165,8 +159,15 @@ li a:hover {
     background-size: cover;
     background-position: center;
   }
+  .menu-toggle {
+    display: block;
+  }
   .navbar ul {
     display: none;
+  }
+  .character-list {
+    display: flex;
+    flex-direction: row;
   }
 }
 .parent-container {
@@ -274,7 +275,7 @@ li a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 6%;
   text-align: center;
 }
 .footer p {

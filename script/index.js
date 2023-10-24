@@ -35,13 +35,15 @@ async function fetchData() {
     }
 }
 
-// function to create and append list items for the json data
+// function to create and append list items for the json data to the screen
 function createList(data) {
     const list = document.querySelector('.character-list');
     list.innerHTML = '';
 
+    //create a list from the names fetched from the API
     data.forEach((character)=>{
         const listItem = document.createElement("li");
+        //append those names to the newly created list
         listItem.innerHTML = character.name;
 
     // add eventlistener to the newly created list
