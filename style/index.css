@@ -35,7 +35,7 @@
   }
 }
 body {
-  background-image: url(/Images/R.jpeg);
+  background-image: url(Images/R.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -171,7 +171,7 @@ li a:hover {
   }
 }
 .parent-container {
-  background-image: url(/Images/373920-Star_Wars.jpeg);
+  background-image: url(Images/373920-Star_Wars.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -185,7 +185,7 @@ li a:hover {
   align-self: center;
   border-radius: 5px;
   background-color: black;
-  background-image: url(/Images/X.jpeg);
+  background-image: url(Images/X.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -207,7 +207,7 @@ li a:hover {
   border: none;
   border-radius: 25px;
   background-color: white;
-  background-image: url(/Images/official-linkedin-icon-png-12.jpeg);
+  background-image: url(Images/official-linkedin-icon-png-12.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -222,7 +222,7 @@ li a:hover {
   border: none;
   border-radius: 4px;
   background-color: white;
-  background-image: url(/Images/OIP.jpeg);
+  background-image: url(Images/OIP.jpeg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
