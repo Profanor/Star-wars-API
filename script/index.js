@@ -66,7 +66,7 @@ function createList(data) {
 
 // function to show character details
 const characterImages = {
-    "Luke Skywalker": "/Images/luke.webp",
+    "Luke Skywalker": "Images/luke.webp",
     "C-3PO": "/Images/c-3po.jpeg",
     "R2-D2": "/Images/R2-D2.jpeg",
     "Darth Vader": "/Images/vader.webp",
