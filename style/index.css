@@ -7,7 +7,7 @@
   text-align: center;
 }
 .force {
-  font-size: 24px;
+  font-size: 3vw;
   color: white;
   font-family: 'Arial', sans-serif;
   white-space: nowrap;
@@ -22,13 +22,13 @@
     transform: translateX(0);
   }
   25% {
-    transform: translateX(10px);
+    transform: translateX(1vw);
   }
   50% {
     transform: translateX(0);
   }
   75% {
-    transform: translateX(-10px);
+    transform: translateX(-1vw);
   }
   100% {
     transform: translateX(0);
@@ -49,16 +49,17 @@ body {
 }
 .character-list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
 }
 .character-list li {
   color: white;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 1.6vw;
   font-family: sans-serif;
-  margin: 10px 0;
+  margin: 1vw 0;
+  text-align: center;
 }
 .character-list li:hover {
   background-color: rgb(35, 22, 22);
@@ -66,14 +67,14 @@ body {
 .character-details {
   color: white;
   font-family: sans-serif;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 1.5vw;
+  line-height: 2.5vw;
 }
 .character-details img {
   border-radius: 8px;
   cursor: pointer;
   max-width: 100%;
-  max-height: 150px;
+  max-height: 20vw;
   display: block;
   margin: 0 auto;
   transition: transform 0.9s ease;
@@ -90,18 +91,21 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
+  padding: 10px;
 }
 .navbar ul {
   display: flex;
-  justify-content: flex-end;
   list-style-type: none;
 }
 .navbar ul.active {
   display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 .navbar ul li {
+  font-size: 16px;
   transition: all 2.5s ease;
-  padding: 5px auto; /* Add some padding to separate items */
+  padding: 5px auto;
 }
 /* styling for the unordered list */
 ul {
@@ -126,11 +130,10 @@ li a {
 }  
 /* styling on hover of the link list items*/
 li a:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);/* made it transparent */
 }
 .menu-toggle {
   cursor: pointer;
-  margin-left: auto;
   display: none;
 }
 .menu-open .bar.bar1 {
@@ -161,17 +164,29 @@ li a:hover {
   }
   .menu-toggle {
     display: block;
+    cursor: pointer;
   }
   .navbar ul {
     display: none;
   }
   .character-list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .character-list li {
+    cursor: pointer;
+    flex: 0 1 calc(50% - 10px); /* Two items per row on small screens */
+    font-size: 16px;
+    margin: 6px 0;
+    text-align: center;
+  }
+  .character-details img {
+    object-fit: cover;
   }
 }
 .parent-container {
-  background-image: url(/Images/373920-Star_Wars.jpeg);
+  background-image: url(/Images/StarWars-slider.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -37,13 +37,13 @@ async function fetchData() {
 
 // function to create and append list items for the json data to the screen
 function createList(data) {
+    //target the <ul> in index.html
     const list = document.querySelector('.character-list');
-    list.innerHTML = '';
-
-    //create a list from the names fetched from the API
-    data.forEach((character)=>{
+    
+        data.forEach((character)=>{
+        //create a list from the names fetched from the API
         const listItem = document.createElement("li");
-        //append those names to the newly created list
+        //append those names to the newly created list and display on the screen
         listItem.innerHTML = character.name;
 
     // add eventlistener to the newly created list
@@ -68,7 +68,7 @@ function createList(data) {
 const characterImages = {
     "Luke Skywalker": "Images/luke.webp",
     "C-3PO": "/Images/c-3po.jpeg",
-    "R2-D2": "/Images/R2-D2.jpeg",
+    "R2-D2": "/Images/r2-d2.jpeg",
     "Darth Vader": "/Images/vader.webp",
     "Leia Organa": "/Images/leia.webp",
     "Owen Lars" : "/Images/Owen_Lars.webp",
@@ -78,9 +78,11 @@ const characterImages = {
     "Obi-Wan Kenobi": "/Images/obi.jpeg",
 };
 function showDetails(character) {
+    //target the character details div in index.html
     const details = document.querySelector('.character-details');
     const characterName = character.name;
     const characterImageURL = characterImages[characterName] || "R2.jpg";
+    //dynamically generate html elements to append name, image, gender and height
     details.innerHTML = `
     <h3>Name: ${character.name}</h3>
     <img src = "${characterImageURL}" alt="${characterName}" />
@@ -99,15 +101,14 @@ function showDetails(character) {
     });
 }
 
-//grab the button for calling the function fetchData
+//grab the button for calling the API function fetchData
 const fetchDataButton = document.querySelector('.fetchData');
 
+//add an eventlistener to listen for a click of the button
 fetchDataButton.addEventListener('click', ()=>{
-    //function call
-    fetchData()
+    fetchData() //function call
     .then((data) => {
     createList(data);
-    console.log(data);
 })
 .catch((error)=> {
     console.error('Error fetching data:', error);
